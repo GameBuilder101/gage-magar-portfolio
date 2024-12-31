@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <style>
+        body {
+            margin: 2rem;
+        }
+
+        img {
+            max-width: 600px;
+            max-height: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>D&D Monster Search Documentation</h1>
+        <p><a href="index.html">Back to Main Page</a></p>
+        <p>Gage Magar</p>
+        <hr>
+    </header>
+    <main>
+        <p>The creation process for this project began with the interface sketch, followed by writing the semantic HTML.
+            Next, the Javascript was implemented and tested, after which CSS was added. In order to determine how to use
+            the API, I followed the instructions provided on <a href="https://open5e.com/api-docs" target="_blank">this
+                page</a>. Additionally, whenever I needed to know the data keys for the JSON objects, I could either
+            visit <a href="https://api.open5e.com/v1/monsters/" target="_blank">this page</a> or print the returned
+            object to console. It is worth noting that, while the API provides an image property in the results, very
+            few monsters actually have images. This is a limitation of the API's data and is not something I can easily
+            solve. This project meets the requirements by having a functional and aesthetically pleasing web page which
+            can be used to search an API and display the results to the user. It displays a spinner image and results
+            text
+            to keep the user notified of the application's current status. It also saves the user's previous search term
+            when closing the page, as per the project requirements.</p>
+        <hr>
+        <h2>API</h2>
+        <p>Click <a href="https://open5e.com/" target="_blank">here</a> for a link to the API used in this project.</p>
+        <hr>
+        <h2>Interface Sketch</h2>
+        <img src="../../images/source/dnd-monster-search/interface-sketch.png" alt="rough interface sketch mockup">
+        <hr>
+        <h2>Resources Used</h2>
+        <ul>
+            <li><a href="https://fonts.google.com/specimen/Cinzel" target="_blank">Cinzel Font</a></li>
+            <li><a href="https://donatoarts.com/fantasy" target="_blank">Header Background Image</a></li>
+        </ul>
+    </main>
+</body>
+
+</html>

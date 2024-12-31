@@ -1,0 +1,142 @@
+body {
+    padding: 1.5rem;
+    background-image: url("images/zombie-background.png");
+    background-size: 256px;
+    image-rendering: pixelated;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.2rem;
+    color: #d7d7d7;
+}
+
+body>* {
+    image-rendering: initial;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 3rem;
+    z-index: -8;
+    background-color: black;
+    border: 4px solid #e11822;
+    outline: 4px solid black;
+}
+
+.content.white-background {
+    background-color: white;
+    border: 4px solid black;
+    outline: 4px solid white;
+    color: #212121;
+}
+
+.content.wide {
+    max-width: 135vh;
+}
+
+.content.short {
+    padding: 1rem 3rem;
+}
+
+footer {
+    text-align: center;
+    font-weight: bold;
+}
+
+a {
+    word-break: break-all;
+}
+
+a:link {
+    color: #e11822;
+}
+
+a:visited {
+    color: #b2121a;
+}
+
+a:hover,
+a:focus {
+    color: #f9212c;
+}
+
+a:active {
+    color: #b2121a;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+.content.white-background h2,
+.content.white-background h3,
+.content.white-background h4,
+.content.white-background h5,
+.content.white-background h6 {
+    color: black;
+    border-color: black;
+}
+
+#logo {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    image-rendering: pixelated;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    font-family: "Lexend Deca", sans-serif;
+    text-align: center;
+    color: #e11822;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+hr {
+    height: 4px;
+    border: none;
+    background-color: black;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+img,
+.app-container {
+    background-color: black;
+    border: 4px solid black;
+}
+
+.app-container {
+    outline: 4px solid white;
+}
+
+.app-container {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    margin-top: 2rem;
+}
+
+.app-container>canvas {
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+
+#load-state {
+    width: 100%;
+    padding-top: 4rem;
+    text-align: center;
+}

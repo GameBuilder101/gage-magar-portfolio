@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Monster Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>D&D Monster Search</h1>
+            <div id="search-box">
+                <div>
+                    <input name="search-term" id="search-term" type="text" placeholder="Enter a search term"
+                        maxlength="64">
+                    <input type="submit" value="Search" id="search">
+                </div>
+                <div>
+                    <label for="cr">Challenge Rating
+                        <input name="cr" id="cr" type="number" min="0" placeholder="Any">
+                    </label>
+                    <div>
+                        <label for="min-hit-points" id="min-hit-points-label">Hit Points
+                            <input name="min-hit-points" id="min-hit-points" type="number" min="1" placeholder="No minimum">
+                        </label>
+                        <input name="max-hit-points" id="max-hit-points" type="number" min="1" placeholder="No maximum">
+                    </div>
+                    <select name="type" id="type">
+                        <option value="any">Any type</option>
+                        <option value="Aberration">Aberration</option>
+                        <option value="Beast">Beast</option>
+                        <option value="Celestial">Celestial</option>
+                        <option value="Construct">Construct</option>
+                        <option value="Dragon">Dragon</option>
+                        <option value="Elemental">Elemental</option>
+                        <option value="Fey">Fey</option>
+                        <option value="Fiend">Fiend</option>
+                        <option value="Giant">Giant</option>
+                        <option value="Monstrosity">Monstrosity</option>
+                        <option value="Ooze">Ooze</option>
+                        <option value="Plant">Plant</option>
+                        <option value="Undead">Undead</option>
+                    </select>
+                    <select name="size" id="size">
+                        <option value="any">Any size</option>
+                        <option value="tiny">Tiny</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="huge">Huge</option>
+                        <option value="gargantuan">Gargantuan</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Results</h2>
+            <img id="spinner" src="images/spinner.gif" alt="">
+            <div class="pagination" id="upper-pagination">
+                <button class="page-left">Previous Page</button>
+                <p class="status"></p>
+                <button class="page-right">Next Page</button>
+            </div>
+            <div id="results-container"></div>
+            <div class="pagination" id="lower-pagination">
+                <button class="page-left">Previous Page</button>
+                <p class="status"></p>
+                <button class="page-right">Next Page</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Created by Gage Magar, 2024 | <a href="documentation.html">Documentation</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

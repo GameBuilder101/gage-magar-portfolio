@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Attack of the Horde | Design Document</title>
+</head>
+
+<body>
+    <div class="content white-background">
+        <header>
+            <object data="images/logo.png" type="image/png" id="logo">
+                <h1>Attack of the Horde</h1>
+            </object>
+        </header>
+        <main>
+            <h2>High Concept</h2>
+            <p>It's based on space invaders, but themed around a zombie invasion on the player's defenses. The player
+                must balance attacking zombies and establishing more defenses to survive as long as possible.</p>
+            <h2>Genre</h2>
+            <p>It could be classified as an arcade style game, specifically with shooting elements.</p>
+            <h2>Platform</h2>
+            <p>It will be only be designed to function on desktop. This is because adapting the screen and play space to
+                fit on a phone might impact the gameplay too much.</p>
+            <h2>Story</h2>
+            <p>The premise is that the player is defending themselves and their base from an invading zombie horde. It
+                will attempt to invoke feelings of action and horror while leaning into the simplicity of the aesthetic
+                style to keep it casual. The player's motivation will be to attain a high score on the number of waves
+                they survive.</p>
+            <h2>Aesthetics</h2>
+            <p>The game will have a simple aesthetic with monotone black and white pixel art accentuated with occasional
+                splashes of red. This will hopefully make it quick to produce and easy to read for the player.</p>
+            <p>Sound will have an 8-bit feel, but not strictly adhere to actual 8-bit limitations. There will need to be
+                audio clips for starting the game, shooting, creating new defenses, and the game ending. These sounds
+                could be more akin to convential 8-bit. Sounds such as zombies groaning or the player being damaged
+                could use heavily bitcrushed audio samples. Music may also require this technique.</p>
+            <h2>Gameplay</h2>
+            <h3>Mechanics</h3>
+            <ul>
+                <li>The player can move left/right and shoot directly upwards, similar to space invaders.</li>
+                <li>Zombies continually spawn from the top of the screen in waves.</li>
+                <li>Zombies can be shot to kill them.</li>
+                <li>The player has health. When a zombie reaches the bottom of the screen, it deals damage. When health
+                    reaches zero, the game ends.</li>
+                <li>The player can build barriers in front of them, which slow zombies by forcing them to attack it
+                    first.</li>
+                <li>The player can build explosives that kill zombies in a radius when they reach it.</li>
+                <li>Building requires resources obtained by killing zombies.</li>
+                <li>Some zombies shoot projectiles that can damage the player.</li>
+            </ul>
+            <h3>Control</h3>
+            <p>It will only require a keyboard to play.</p>
+            <h3>Onboarding</h3>
+            <p>While the arcade nature of the game provides few onboarding options, something that could work is to make
+                the player start the game by pressing the same button used to shoot. Thus, the game immediately begins
+                as a shot is being fired into a lone zombie. This teaches the player how to shoot if they don't bother
+                to read the instructions on the title screen.
+            </p>
+            <h3>Player Learning</h3>
+            <p>The game begins with relatively few zombies and increaes in intensity over time. This gives the player a
+                chance to learn before pressure is increased. The more they play the game, the better the player will
+                become at intuiting when it is best to prioritize shooting over defensive construction.</p>
+            <h2>Mockups</h2>
+            <img src="../../images/source/attack-of-the-horde/mockup-1.jpg"
+                alt="A crude sketch of the gameplay with zombies arriving from the top of the screen.">
+            <img src="../../images/source/attack-of-the-horde/mockup-2.jpg" alt="A crude sketch of the title screen featuring a tutorial description.">
+            <h2>Development Process</h2>
+            <p>Because this project was started without a precusor assignment to learn PixiJS, much of the development
+                time was spent figuring out how to use the library. I began by creating the HTML page on which the game
+                would be hosted. Then, I split the program into a state machine using different Javascript files. While
+                this is worse for load times, it is much more convenient for human readability. Then, I programmed each
+                state as needed. Partway through, I ended up needing to manually download the bundled PixiJS libraries
+                since the PixiJS Filters library was broken on the CDN version. Ultimately, this meets project
+                requirements by providing a user-friendly, interactive experience which features sound, graphics, ES6
+                classes, moderate responsiveness, and clean code conventions.</p>
+            <h2>Resources Used</h2>
+            <ul>
+                <li><a href="https://fonts.google.com/specimen/Lexend+Deca" target="_blank">Lexend Deca Font</a></li>
+                <li><a href="https://www.bfxr.net/" target="_blank">Chiptune Sound Generator</a></li>
+                <li><a href="https://lingojam.com/RobotVoiceGenerator/" target="_blank">TTS Voice</a></li>
+                <li>"Blipotron" Kevin MacLeod (incompetech.com)<br>Licensed under Creative Commons: By Attribution 4.0
+                    License<br><a href="http://creativecommons.org/licenses/by/4.0/"
+                        target="_blank">http://creativecommons.org/licenses/by/4.0/</a></li>
+                <li>"Rhinoceros" Kevin MacLeod (incompetech.com)<br>Licensed under Creative Commons: By Attribution 4.0
+                    License<br><a href="http://creativecommons.org/licenses/by/4.0/"
+                        target="_blank">http://creativecommons.org/licenses/by/4.0/</a></li>
+            </ul>
+        </main>
+    </div>
+    <div class="content white-background short">
+        <footer>
+            <p><a href="index.html">Main Page</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>

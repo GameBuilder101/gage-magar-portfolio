@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="scripts/libraries/pixi.js"></script>
+    <script src="scripts/libraries/pixi-sound.js"></script>
+    <script src="scripts/libraries/pixi-filters.js"></script>
+    <title>Attack of the Horde</title>
+</head>
+
+<body>
+    <div class="content wide">
+        <header>
+            <h1>Attack of the Horde</h1>
+        </header>
+        <main>
+            <div class="app-container">
+                <p id="load-state">Loading game...</p>
+            </div>
+        </main>
+    </div>
+    <div class="content wide short">
+        <footer>
+            <p><a href="design-document.html">Design Document</a></p>
+        </footer>
+    </div>
+    <script src="scripts/shared.js"></script>
+    <script src="scripts/controls.js"></script>
+    <script src="scripts/play-button-state.js"></script>
+    <script src="scripts/title-state.js"></script>
+    <script src="scripts/gameplay-state.js"></script>
+    <script src="scripts/gameover-state.js"></script>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>
