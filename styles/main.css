@@ -1,3 +1,15 @@
+/* ---------------- Global variables ---------------- */
+:root {
+    --white: #f3f3f3;
+    --black: #1a191a;
+    --accent: #f12551;
+    --accent-active: #b11436;
+    --text: #2e2e2e;
+    --text-strong: #111111;
+    --white-text: #cfcfcf;
+    --white-text-strong: #f3f3f3;
+}
+
 /* ---------------- Common element styles ---------------- */
 
 html {
@@ -8,9 +20,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f3f3f3;
+    background-color: var(--white);
+    background-image: url("../images/background-grid.png");
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
-    color: #292929;
+    color: var(--text);
 }
 
 /* Headings */
@@ -22,7 +36,7 @@ h4,
 h5,
 h6 {
     font-family: "Nunito", sans-serif;
-    color: #111111;
+    color: var(--text-strong);
 }
 
 h1 {
@@ -60,15 +74,29 @@ h6 {
 }
 
 hr {
+    width: 100%;
     height: 2px;
+    margin-left: 0;
+    margin-right: 0;
     border: none;
     background-color: #afafaf;
+    animation: expand-hr ease-out 0.5s;
+}
+
+@keyframes expand-hr {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 /* Links */
 
 a {
-    color: #cfcfcf;
+    color: var(--white-text);
     transition: color 0.125s ease-out;
 }
 
@@ -78,11 +106,11 @@ a:visited {
 
 a:hover,
 a:focus {
-    color: #f12551;
+    color: var(--accent);
 }
 
 a:active {
-    color: #b11436;
+    color: var(--accent-active);
 }
 
 /* Lists */
@@ -101,8 +129,8 @@ ol {
 /* ---------------- Organizational element styles ---------------- */
 
 .dark-section {
-    background-color: #1a191a;
-    color: #f3f3f3;
+    background-color: var(--black);
+    color: var(--white-text);
 }
 
 .dark-section h1,
@@ -111,13 +139,18 @@ ol {
 .dark-section h4,
 .dark-section h5,
 .dark-section h6 {
-    color: #f3f3f3;
+    color: var(--white-text-strong);
 }
 
 .content {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 2rem;
+}
+
+main .content {
+    background-color: var(--white);
+    box-shadow: 0 0 256px var(--white);
 }
 
 /* ---------------- Common animation styles ---------------- */
@@ -128,7 +161,7 @@ ol {
     width: 0;
     height: 2px;
     margin: 0 auto;
-    background-color: #f12551;
+    background-color: var(--accent);
     position: relative;
     transition-property: width, color;
     transition-duration: 0.125s;
@@ -146,6 +179,7 @@ ol {
 header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    z-index: 64;
 }
 
 header .content {
@@ -157,6 +191,23 @@ header .content {
 
 #title {
     width: 50%;
+}
+
+#title a {
+    text-decoration: none;
+}
+
+#title a:visited {
+    color: unset;
+}
+
+#title a:hover,
+#title a:focus {
+    color: var(--accent);
+}
+
+#title a:active {
+    color: var(--accent-active);
 }
 
 @media only screen and (max-width: 720px) {
@@ -176,16 +227,16 @@ header .content {
 }
 
 .typing-cursor {
-    color: #f12551;
+    color: var(--accent);
 }
 
 @keyframes type-letter {
     0% {
-        color: #f12551;
+        color: var(--accent);
     }
 
     100% {
-        color: #f3f3f3;
+        color: var(--white-text-strong);
     }
 }
 
@@ -204,40 +255,40 @@ header .content {
 }
 
 .nav-item a {
-    color: #cfcfcf;
+    color: var(--white-text);
     text-decoration: none;
 }
 
 .nav-item.current a {
-    color: #f3f3f3;
+    color: var(--white-text-strong);
 }
 
 .nav-item:hover a,
 .nav-item:focus a {
-    color: #f12551;
+    color: var(--accent);
 }
 
 .nav-item:active a {
-    color: #b11436;
+    color: var(--accent-active);
 }
 
 .nav-item::after {
     bottom: -0.5rem;
-    background-color: #cfcfcf;
+    background-color: var(--white-text);
 }
 
 .nav-item.current::after {
     width: 100%;
-    background-color: #f3f3f3;
+    background-color: var(--white-text-strong);
 }
 
 .underline-hover:hover::after,
 .underline-hover:focus::after {
-    background-color: #f12551;
+    background-color: var(--accent);
 }
 
 .nav-item:active::after {
-    background-color: #b11436;
+    background-color: var(--accent-active);
 }
 
 @media only screen and (max-width: 390px) {
@@ -248,7 +299,7 @@ header .content {
 
     .nav-item::after {
         width: 100%;
-        background-color: #292929;
+        background-color: var(--text);
     }
 }
 
@@ -258,6 +309,7 @@ footer {
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-top: auto;
+    z-index: 64;
 }
 
 footer .content {
@@ -352,35 +404,90 @@ footer h3 {
     gap: 2rem;
 }
 
+.portfolio-item-container,
+.portfolio-item-container:visited,
+.portfolio-item-container:hover,
+.portfolio-item-container:focus,
+.portfolio-item-container:active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.portfolio-item-container:hover,
+.portfolio-item-container:focus {
+    z-index: 128;
+}
+
 .portfolio-item {
-    background-color: #e9e9e9;
-    border-bottom: #1a191a solid 2px;
+    border-bottom: var(--black) solid 4px;
     border-radius: 5px;
-    box-shadow: 0 12px 8px #00000033;
-    transition-property: transform, box-shadow;
-    transition-duration: 0.125s;
-    transition-timing-function: ease-out;
+    background-color: #e9e9e9;
+    box-shadow: 0 10px 8px #0000002a;
 }
 
 .portfolio-item:hover,
 .portfolio-item:focus {
-    transform: scale(1.2);
-    box-shadow: 0 12px 16px #00000066;
+    box-shadow: 0 0 64px #b1143688;
 }
 
-.portfolio-item * {
-    padding-left: 2rem;
-    padding-right: 2rem;
+.portfolio-item>* {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.portfolio-item h3 {
+    margin: 0;
+}
+
+.portfolio-item ul {
+    display: flex;
+}
+
+.portfolio-item ul li {
+    padding-left: 6px;
+    padding-right: 0;
+    list-style-type: "\2022  ";
+}
+
+.portfolio-item ul li:first-child {
+    padding-left: 0;
+    list-style-type: none;
 }
 
 .portfolio-item img {
     width: 100%;
     padding: 0;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+}
+
+.portfolio-item>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
 .portfolio-item:after {
-    bottom: -2px;
+    position: absolute;
+    height: 4px;
+    bottom: -4px;
+    border-radius: 0 0 5px 5px;
+}
+
+@media only screen and (max-width: 550px) {
+    .portfolio-item ul {
+        flex-direction: column;
+    }
+
+    .portfolio-item ul li {
+        padding-left: 0;
+    }
+
+    .portfolio-item ul li:first-child {
+        list-style-type: "\2022  ";
+    }
 }
 
 @media only screen and (max-width: 850px) {
@@ -390,7 +497,7 @@ footer h3 {
         gap: 0.75rem;
     }
 
-    .portfolio-item:hover {
-        transform: scale(1.1);
+    .portfolio-item h3 {
+        font-size: 1.2rem;
     }
 }
