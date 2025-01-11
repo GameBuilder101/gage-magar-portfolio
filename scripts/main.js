@@ -25,7 +25,7 @@ function typeTitleStep() {
     if (typeIndex >= titleText.length) {
         typingCursor.remove();
     } else {
-        setTimeout(typeTitleStep, 80);
+        setTimeout(typeTitleStep, 70);
     }
 }
 

@@ -25,6 +25,11 @@ body {
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     color: var(--text);
+    overflow-y: scroll;
+}
+
+::selection {
+    background-color: #f1255199;
 }
 
 /* Headings */
@@ -69,7 +74,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+ol,
+iframe {
     margin: 1rem 0;
 }
 
@@ -96,8 +104,12 @@ hr {
 /* Links */
 
 a {
-    color: var(--white-text);
+    color: var(--accent);
     transition: color 0.125s ease-out;
+}
+
+.dark-section a {
+    color: var(--white-text);
 }
 
 a:visited {
@@ -151,6 +163,37 @@ ol {
 main .content {
     background-color: var(--white);
     box-shadow: 0 0 256px var(--white);
+}
+
+/* ---------------- Special element styles ---------------- */
+
+.single-line-bullets {
+    display: flex;
+}
+
+.single-line-bullets li {
+    padding-left: 6px;
+    padding-right: 0;
+    list-style-type: "\2022  ";
+}
+
+.single-line-bullets li:first-child {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .single-line-bullets {
+        flex-direction: column;
+    }
+
+    .single-line-bullets li {
+        padding-left: 0;
+    }
+
+    .single-line-bullets li:first-child {
+        list-style-type: "\2022  ";
+    }
 }
 
 /* ---------------- Common animation styles ---------------- */
@@ -223,7 +266,7 @@ header .content {
 }
 
 .typed-letter {
-    animation: type-letter ease-out 1.5s;
+    animation: type-letter ease-out 1s;
 }
 
 .typing-cursor {
@@ -440,18 +483,7 @@ footer h3 {
 }
 
 .portfolio-item ul {
-    display: flex;
-}
-
-.portfolio-item ul li {
-    padding-left: 6px;
-    padding-right: 0;
-    list-style-type: "\2022  ";
-}
-
-.portfolio-item ul li:first-child {
-    padding-left: 0;
-    list-style-type: none;
+    margin: 0;
 }
 
 .portfolio-item img {
@@ -476,20 +508,6 @@ footer h3 {
     border-radius: 0 0 5px 5px;
 }
 
-@media only screen and (max-width: 550px) {
-    .portfolio-item ul {
-        flex-direction: column;
-    }
-
-    .portfolio-item ul li {
-        padding-left: 0;
-    }
-
-    .portfolio-item ul li:first-child {
-        list-style-type: "\2022  ";
-    }
-}
-
 @media only screen and (max-width: 850px) {
     .portfolio {
         padding: 2rem 0;
@@ -500,4 +518,44 @@ footer h3 {
     .portfolio-item h3 {
         font-size: 1.2rem;
     }
+}
+
+/* ---------------- Portfolio article styles ---------------- */
+
+.portfolio-article-title h2 {
+    font-size: 2.45rem;
+}
+
+.portfolio-article-title li {
+    font-size: 1.25rem;
+}
+
+.portfolio-hero {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.portfolio-article-body {
+    display: flex;
+}
+
+/* Breadcrumb back arrow */
+
+.breadcrumb {
+    margin-top: 4rem;
+    font-size: 1.1rem;
+}
+
+.breadcrumb img {
+    height: 1.6rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    opacity: 60%;
+    transition: transform 0.125s ease-out;
+    pointer-events: none;
+}
+
+.breadcrumb a:hover img,
+.breadcrumb a:focus img {
+    transform: translate(-0.5rem, 0);
 }

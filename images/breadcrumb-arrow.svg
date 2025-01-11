@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1135.15 2018.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1a191a;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 180px;
+      }
+    </style>
+  </defs>
+  <path id="Divider" class="cls-1" d="M1045.15,1928.84L127.18,1010.87C433.17,703.91,739.16,396.96,1045.15,90"/>
+</svg>
