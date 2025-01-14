@@ -295,7 +295,7 @@ header .content {
 }
 
 #title a:visited {
-    color: unset;
+    color: var(--white-text-strong);
 }
 
 #title a:hover,
@@ -318,24 +318,6 @@ header .content {
         justify-content: center;
     }
 }
-
-/*.typed-letter {
-    animation: type-letter ease-out 1s;
-}
-
-.typing-cursor {
-    color: var(--accent);
-}
-
-@keyframes type-letter {
-    0% {
-        color: var(--accent);
-    }
-
-    100% {
-        color: var(--white-text-strong);
-    }
-}*/
 
 /* Navigation */
 
