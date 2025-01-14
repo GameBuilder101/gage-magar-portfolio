@@ -1,4 +1,4 @@
-// Get the title and clear it to begin a typing animation
+/*// Get the title and clear it to begin a typing animation
 const title = document.querySelector("#title a");
 const titleText = title.innerText;
 title.innerHTML = "";
@@ -27,7 +27,7 @@ function typeTitleStep() {
     } else {
         setTimeout(typeTitleStep, 70);
     }
-}
+}*/
 
 // Set up portfolio tilt card effect
 VanillaTilt.init(document.querySelectorAll(".portfolio-item"), {
@@ -40,11 +40,14 @@ VanillaTilt.init(document.querySelectorAll(".portfolio-item"), {
 for (let element of document.querySelectorAll(".pause-until-view")) {
     // Start paused
     element.style.animationPlayState = "paused";
+    // A variable property is required for pseudo-element animations to also be paused
+    element.style.setProperty("--pause-until-view", "paused");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 element.style.animationPlayState = "running";
+                element.style.setProperty("--pause-until-view", "running");
             }
         });
     });
