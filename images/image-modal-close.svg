@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2018.84 2018.84">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f3f3f3;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 180px;
+      }
+    </style>
+  </defs>
+  <line class="cls-1" x1="90" y1="90" x2="1928.84" y2="1928.84"/>
+  <line class="cls-1" x1="1928.84" y1="90" x2="90" y2="1928.84"/>
+</svg>
