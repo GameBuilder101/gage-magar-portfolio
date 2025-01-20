@@ -75,7 +75,9 @@ if (modalImages.length > 0) {
     imageModal.innerHTML =
         `<button class="image-modal-close graphic-button"><img src="../images/image-modal-close.svg" alt=""></button>` +
         `<div class="content">` +
+        `<div id="image-modal-image">` +
         `<img src="" alt="">` +
+        `</div>` +
         `<p id="image-modal-figure"></p>` +
         `</div>`;
 
@@ -89,7 +91,7 @@ if (modalImages.length > 0) {
     document.querySelector(".image-modal-close").addEventListener("click", closeImageModal);
 
     // Obtain elements to be modified once opened
-    imageModalImage = document.querySelector("#image-modal .content img");
+    imageModalImage = document.querySelector("#image-modal-image img");
     imageModalFigure = document.querySelector("#image-modal-figure");
 
     closeImageModal(); // Start hidden
