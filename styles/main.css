@@ -214,7 +214,7 @@ main .content {
 
 .player-container {
     position: relative;
-    --animation: player-wipe-start ease-out 0.25s;
+    --animation: player-wipe-after-start ease-out 0.25s;
 }
 
 .player-container::after {
@@ -224,18 +224,15 @@ main .content {
     height: 100%;
     border-radius: 5px;
     background-color: var(--accent);
-    background-image: url("../images/background-site-icon.svg");
-    background-size: 180px;
-    background-position: center;
-    background-repeat: no-repeat;
     position: absolute;
     top: 0;
     animation: var(--animation);
     animation-fill-mode: both;
     pointer-events: none;
+    visibility: visible;
 }
 
-@keyframes player-wipe-start {
+@keyframes player-wipe-after-start {
     0% {
         width: 0;
         left: 0;
@@ -252,7 +249,7 @@ main .content {
     }
 }
 
-@keyframes player-wipe-end {
+@keyframes player-wipe-after-end {
     0% {
         width: 100%;
         left: 0;
@@ -334,7 +331,7 @@ main .content {
     bottom: -4px;
 }
 
-/* Header text wipe animation */
+/* Wipe animation */
 
 .wipe-anim {
     animation: wipe ease-out 0.5s;
@@ -343,19 +340,23 @@ main .content {
 
 @keyframes wipe {
     0% {
-        color: var(--white);
+        color: var(--accent);
+        visibility: hidden;
     }
 
     50% {
-        color: var(--white);
+        color: var(--accent);
+        visibility: hidden;
     }
 
     51% {
         color: var(--accent);
+        visibility: visible;
     }
 
     100% {
         color: var(--text-strong);
+        visibility: visible;
     }
 }
 
@@ -370,6 +371,7 @@ main .content {
     animation: wipe-after ease-out 0.5s;
     animation-play-state: var(--pause-until-view);
     pointer-events: none;
+    visibility: visible;
 }
 
 @keyframes wipe-after {
@@ -609,6 +611,8 @@ footer h3 {
 }
 
 #image-modal-image {
+    display: flex;
+    justify-content: center;
     width: 100%;
     aspect-ratio: 16/9;
     margin-bottom: 1rem;

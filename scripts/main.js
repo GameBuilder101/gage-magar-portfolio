@@ -52,7 +52,7 @@ function onYouTubeIframeAPIReady() {
         events: {
             "onReady": (e) => {
                 // Set a variable to play a pseduo-element animation that uncovers the video
-                playerContainer.style.setProperty("--animation", "player-wipe-end ease-out 0.25s");
+                playerContainer.style.setProperty("--animation", "player-wipe-after-end ease-out 0.25s");
             }
         }
     });
@@ -64,6 +64,7 @@ function onYouTubeIframeAPIReady() {
 const modalImages = document.querySelectorAll(".modal-image");
 let imageModal;
 let imageModalImage;
+let imageModalImageContainer;
 let imageModalFigure;
 // Create the image modal element if it is necessary for this page
 if (modalImages.length > 0) {
@@ -73,7 +74,7 @@ if (modalImages.length > 0) {
 
     // Add contents
     imageModal.innerHTML =
-        `<button class="image-modal-close graphic-button"><img src="../images/image-modal-close.svg" alt=""></button>` +
+        `<button class="image-modal-close graphic-button"><img src="../images/image-modal-close.svg" alt="Close"></button>` +
         `<div class="content">` +
         `<div id="image-modal-image">` +
         `<img src="" alt="">` +
@@ -85,13 +86,15 @@ if (modalImages.length > 0) {
 
     // Add close functionality
     imageModal.addEventListener("click", (e) => {
-        if (e.target == imageModal) // Allow the user to also close the modal by clicking off to the sides
+        // Allow the user to also close the modal by clicking off to the sides
+        if (e.target == imageModal || e.target == imageModalImageContainer)
             closeImageModal();
     });
     document.querySelector(".image-modal-close").addEventListener("click", closeImageModal);
 
     // Obtain elements to be modified once opened
     imageModalImage = document.querySelector("#image-modal-image img");
+    imageModalImageContainer = document.querySelector("#image-modal-image");
     imageModalFigure = document.querySelector("#image-modal-figure");
 
     closeImageModal(); // Start hidden
