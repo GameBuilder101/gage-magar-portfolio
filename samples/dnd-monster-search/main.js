@@ -1,5 +1,5 @@
 let searchTermElement;
-const lastSearchTermStorageKey = "gjm5250-last-search-term";
+const lastSearchTermStorageKey = "dnd-monster-search-last-search-term";
 
 let crElement;
 let minHitPointsElement;

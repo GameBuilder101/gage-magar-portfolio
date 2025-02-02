@@ -25,13 +25,13 @@ function initGameover() {
     app.stage.addChild(timeSurvivedDisplay);
 
     // Get the high score from browser storage and set it if a new score was reached
-    let highScore = localStorage.getItem("gjm5250-high-score");
+    let highScore = localStorage.getItem("attack-of-the-horde-high-score");
     if (highScore == null)
         highScore = 0;
     if (wave > highScore)
     {
         highScore = wave;
-        localStorage.setItem("gjm5250-high-score", highScore);
+        localStorage.setItem("attack-of-the-horde-high-score", highScore);
     }
 
     // Create the number display for the highest waves survived

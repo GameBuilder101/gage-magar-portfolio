@@ -147,6 +147,10 @@
     grid-template-columns: 1fr 2fr;
 }
 
+#portfolio-article-images.two-one-fr {
+    grid-template-columns: 2fr 1fr;
+}
+
 @media only screen and (max-width: 850px) {
     #portfolio-article-images {
         padding: 2rem 0 0 0;
