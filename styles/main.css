@@ -5,9 +5,9 @@
     --black: #1a191a;
     --accent: #f12551;
     --accent-active: #b11436;
-    --text: #343434;
+    --text: #3e3e3e;
     --text-strong: #111111;
-    --white-text: #cfcfcf;
+    --white-text: #cccccc;
     --white-text-strong: #f3f3f3;
     font-size: 17px;
 }
@@ -182,6 +182,7 @@ main .content {
 
 .single-line-bullets {
     display: flex;
+    padding: 0;
     list-style-position: inside;
 }
 

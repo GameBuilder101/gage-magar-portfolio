@@ -39,35 +39,11 @@
     padding-right: 1.25rem;
 }
 
-.portfolio-item h3 {
-    margin: 0;
-}
-
-.portfolio-item ul {
-    margin: 0;
-    padding: 0;
-}
-
 .portfolio-item img {
     display: block;
     width: 100%;
     padding: 0;
     border-radius: 5px 5px 0 0;
-}
-
-.portfolio-item>div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 1rem 0;
-}
-
-@media only screen and (max-width: 1300px) {
-    .portfolio-item h3 {
-        width: 100%;
-    }
 }
 
 @media only screen and (max-width: 850px) {
