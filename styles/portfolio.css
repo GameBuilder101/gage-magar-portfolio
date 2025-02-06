@@ -8,6 +8,14 @@
     gap: 2rem;
 }
 
+@media only screen and (max-width: 850px) {
+    .portfolio {
+        padding: 2rem 0;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+}
+
 /* Items */
 
 .portfolio-item-container,
@@ -44,12 +52,4 @@
     width: 100%;
     padding: 0;
     border-radius: 5px 5px 0 0;
-}
-
-@media only screen and (max-width: 850px) {
-    .portfolio {
-        padding: 2rem 0;
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
 }

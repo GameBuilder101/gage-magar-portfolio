@@ -1,0 +1,94 @@
+/* ---------------- About styles ---------------- */
+
+#about-hero {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-hero-block-container,
+.about-hero-block-container:visited,
+.about-hero-block-container:hover,
+.about-hero-block-container:focus,
+.about-hero-block-container:active {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.about-hero-block {
+    display: flex;
+    padding: 0;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 8px #0000001c;
+    transition: box-shadow 0.125s ease-out;
+    text-align: center;
+}
+
+.about-hero-block:hover,
+.about-hero-block:focus {
+    box-shadow: 0 0 64px #b1143688;
+}
+
+.about-hero-block>* {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.about-hero-block img {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.about-hero-block p {
+    margin-top: 0;
+}
+
+.about-hero-block button {
+    padding: 1rem;
+}
+
+/* Body */
+
+#about-body {
+    display: grid;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+#about-body>div:last-child {
+    max-width: 700px;
+}
+
+#about-body>div>*:first-child {
+    margin-top: 0;
+}
+
+#about-body img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+    #about-hero {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    #about-body {
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    #about-body img {
+        margin-bottom: 2rem;
+    }
+}

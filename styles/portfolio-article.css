@@ -34,49 +34,17 @@
     gap: 2rem;
 }
 
-.portfolio-article-block {
-    padding: 1.25rem;
-    background-color: #e9e9e9;
-    border-radius: 5px;
-    animation: portfolio-article-body-appear 0.5s ease-out;
-    animation-fill-mode: both;
-    opacity: 0;
-    transform: translateY(100px);
-}
-
-.portfolio-article-block:nth-child(1) {
-    animation-delay: 0.05s;
-}
-
-.portfolio-article-block:nth-child(2) {
-    animation-delay: 0.15s;
-}
-
-.portfolio-article-block:nth-child(3) {
-    animation-delay: 0.25s;
-}
-
-@keyframes portfolio-article-body-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-
-    100% {
-        opacity: 100;
-        transform: none;
-    }
-}
-
 @media only screen and (max-width: 920px) {
     #portfolio-article-body {
         grid-template-columns: 1fr;
         gap: 0.75rem;
     }
+}
 
-    .portfolio-article-block {
-        animation-delay: 0s !important;
-    }
+.portfolio-article-block {
+    padding: 1.25rem;
+    background-color: #e9e9e9;
+    border-radius: 5px;
 }
 
 .portfolio-article-block div {
@@ -96,7 +64,7 @@
 
 .portfolio-article-block ul {
     display: grid;
-    grid-template-columns: fit-content(33%) fit-content(33%) fit-content(33%);
+    grid-template-columns: fit-content(50%) fit-content(50%);
     column-gap: 2rem;
 }
 
@@ -116,32 +84,6 @@
     gap: 2rem;
 }
 
-.portfolio-article-image {
-    display: flex;
-    padding: 0;
-    border: none;
-    border-radius: 5px;
-    flex-direction: column;
-    align-items: center;
-    color: var(--text);
-    background-color: #e9e9e9;
-    box-shadow: 0 10px 8px #0000001c;
-}
-
-.portfolio-article-image img {
-    display: block;
-    width: 100%;
-    border-radius: 5px 5px 0 0;
-}
-
-.portfolio-article-image p {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    text-align: center;
-}
-
-/* Special image grid layout properties */
-
 #portfolio-article-images.one-two-fr {
     grid-template-columns: 1fr 2fr;
 }
@@ -156,6 +98,10 @@
         grid-template-columns: 1fr !important;
         gap: 0.75rem;
     }
+}
+
+#portfolio-article-images>* {
+    margin: 0;
 }
 
 /* Breadcrumb back arrow */
