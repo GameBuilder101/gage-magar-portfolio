@@ -131,31 +131,6 @@ a:active,
     color: var(--accent-active);
 }
 
-/* Buttons */
-
-button {
-    padding: 1rem;
-    margin: 1rem 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #424042;
-    font-size: 1rem;
-    color: var(--white-text-strong);
-    cursor: pointer;
-    transition-property: background-color, color;
-    transition-duration: 0.125s;
-    transition-timing-function: ease-out;
-}
-
-button:hover,
-button:focus {
-    background-color: var(--black);
-}
-
-button:active {
-    background-color: var(--black);
-}
-
 /* Lists */
 
 ul,
@@ -202,6 +177,41 @@ main .content {
     border-radius: 5px;
     box-shadow: 0 10px 8px #0000001c;
 }
+
+/* Basic buttons */
+
+.basic-button {
+    display: block;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #424042;
+    font-size: 1rem;
+    color: var(--white-text-strong);
+    text-decoration: none;
+    transition-property: background-color, color;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-out;
+}
+
+.basic-button:visited {
+    color: var(--white-text-strong);
+}
+
+.basic-button:hover,
+.basic-button:focus {
+    color: var(--white-text-strong);
+    background-color: var(--black);
+}
+
+.basic-button:active {
+    color: var(--white-text-strong);
+    background-color: var(--black);
+}
+
+/* Single-line bullets */
 
 .single-line-bullets {
     display: flex;
@@ -302,7 +312,6 @@ main .content {
 .graphic-button:hover,
 .graphic-button:focus {
     opacity: 85%;
-    box-shadow: none;
 }
 
 .graphic-button:active {
@@ -647,9 +656,10 @@ footer h3 {
     flex-direction: column;
     align-items: center;
     padding: 0;
-    background-color: #e9e9e9 !important;
+    background-color: #e9e9e9;
     box-shadow: 0 10px 8px #0000001c;
     transition: box-shadow 0.125s ease-out;
+    cursor: pointer;
 }
 
 .modal-image:hover,
@@ -671,7 +681,6 @@ footer h3 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     text-align: center;
-    color: var(--text);
 }
 
 /* Modal */
@@ -712,15 +721,17 @@ footer h3 {
 }
 
 .image-modal-close {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2rem;
+    height: 2rem;
     padding: 0.75rem;
     margin: 0;
     position: absolute;
+    border-radius: 5px;
     top: 3rem;
     right: 3rem;
     background-color: #00000077 !important;
     z-index: 130;
+    cursor: pointer;
 }
 
 .image-modal-close img {

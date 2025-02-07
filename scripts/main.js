@@ -74,7 +74,7 @@ if (modalImages.length > 0) {
 
     // Add contents
     imageModal.innerHTML =
-        `<button class="image-modal-close graphic-button"><img src="../images/image-modal-close.svg" alt="Close"></button>` +
+        `<div class="image-modal-close graphic-button"><img src="../images/image-modal-close.svg" alt="Close"></div>` +
         `<div class="content">` +
         `<div id="image-modal-image">` +
         `<img src="" alt="">` +
@@ -106,7 +106,7 @@ for (let element of modalImages) {
         element.addEventListener("click", openImageModal);
     } else {
         // Disable clicking if the screen is too small to matter
-        element.classList.remove("modal-image");
+        element.style.pointerEvents = "none";
         element.style.cursor = "auto";
     }
 }
