@@ -153,7 +153,13 @@ if (breadcrumb != undefined)
     {
         const urlSplit = document.referrer.split('/');
         prevPage = urlSplit[urlSplit.length - 1]; // Get the page name itself
-        prevPage = prevPage.substring(0, prevPage.indexOf('.')); // Remove ".html" if needed
+
+        let dotIndex = prevPage.indexOf('.');
+        if (dotIndex < 0)
+        {
+            dotIndex = prevPage.length;
+        }
+        prevPage = prevPage.substring(0, dotIndex); // Remove ".html" if needed
     }
 
     // Find the corresponding display name for the breadcrumb
