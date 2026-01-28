@@ -30,7 +30,7 @@ for (let element of document.querySelectorAll(".pause-until-view")) {
 // Search for a YouTube player container. If one exists, load the YouTube player API
 const playerContainer = document.querySelector(".player-container");
 let player;
-if (playerContainer != null) {
+if (playerContainer != undefined) {
     player = document.createElement("div");
     playerContainer.appendChild(player);
 
@@ -135,4 +135,54 @@ function closeImageModal() {
     imageModal.style.pointerEvents = "none";
     imageModal.style.opacity = 0;
     imageModalImage.style.transform = "scale(0.9)";
+}
+
+/* ---------------- Project breadcrumb ---------------- */
+
+const breadcrumb = document.querySelector(".breadcrumb");
+const navbar = document.querySelector("#nav");
+
+/* Make sure the breadcrumb matches where the user actually navigated from
+ * (some project pages may appear on multiple portfolio listings) */
+if (breadcrumb != undefined)
+{
+    // Pages will have a default breadcrumb in case a referrer is not provided
+    let prevPage = document.body.dataset.defaultBreadcrumb;
+
+    if (document.referrer != "")
+    {
+        const urlSplit = document.referrer.split('/');
+        prevPage = urlSplit[urlSplit.length - 1]; // Get the page name itself
+        prevPage = prevPage.substring(0, prevPage.indexOf('.')); // Remove ".html" if needed
+    }
+
+    // Find the corresponding display name for the breadcrumb
+    let displayName = "Portfolio";
+    switch (prevPage)
+    {
+        case "game-portfolio":
+            displayName = "Game Portfolio";
+            break;
+        case "web-portfolio":
+            displayName = "Web Portfolio";
+            break;
+    }
+
+    // Create breadcrumb elements
+    breadcrumb.innerHTML =
+        `<a href="../${prevPage}">` +
+        `<img src="../images/breadcrumb-arrow.svg" alt="">Back to ${displayName}` +
+        `</a>`;
+
+    /* The navbar item for the selected portfolio uses a special "current" class to
+     * make it look selected. This needs to be updated to match */
+    for (let navItem of navbar.children)
+    {
+        // If this link corresponds to the page
+        if (navItem.firstChild.getAttribute("href").indexOf(prevPage) >= 0)
+        {
+            navItem.classList.add("current");
+            break;
+        }
+    }
 }

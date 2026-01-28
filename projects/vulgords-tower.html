@@ -28,13 +28,13 @@
     <link rel="stylesheet" href="../styles/portfolio-article.css">
 </head>
 
-<body>
+<body data-default-breadcrumb="game-portfolio">
     <header class="dark-section" id="header">
         <div class="content">
             <h1 id="title"><a href="../">Gage Magar</a></h1>
             <menu id="nav">
                 <li class="nav-item underline-hover"><a href="../">About</a></li>
-                <li class="nav-item underline-hover current"><a href="../game-portfolio">Game Portfolio</a></li>
+                <li class="nav-item underline-hover"><a href="../game-portfolio">Game Portfolio</a></li>
                 <li class="nav-item underline-hover"><a href="../web-portfolio">Web Portfolio</a></li>
             </menu>
         </div>
@@ -74,9 +74,9 @@
                         <h3>Description</h3>
                     </div>
                     <p>Vulgord's tower is a turn-based, multiplayer, RPG, tabletop simulator where players race against
-                        each other to navigate the four realms and defeat the final boss. My roles in the project
-                        included programming, gameplay design, and 3D art. It was designed in collaboration with the
-                        game's other developer, who handled the remaining aspects.</p>
+                        each other to reach and defeat the final boss. My roles in the project included programming,
+                        gameplay design, balancing, and 3D art. It was designed in collaboration with the game's other
+                        developer, who handled the remaining aspects.</p>
                 </div>
                 <div class="portfolio-article-block info-block pause-until-view">
                     <div>
@@ -89,7 +89,31 @@
                 </div>
             </div>
             <hr>
+            <div id="portfolio-article-samples">
+                <h3>Samples & Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://vulgordstower.com" target="_blank">Main website</a>: Visit the game website
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/uc?export=download&id=1IUR57i6U3qzmYmhUPxzgXaQWsflSIh-U"
+                            target="_blank">Early prototype alpha (desktop only)</a>: An early prototype build for
+                        Windows, created to test the gameplay before implementing online multiplayer
+                    </li>
+                    <li>
+                        <a href="../samples/vulgords-tower/vulgords-tower-balancing-sheet.xlsx"
+                            target="_blank">Balancing sheet</a>: The sheet used to help with balancing during
+                        development
+                    </li>
+                </ul>
+            </div>
+            <hr>
             <div id="portfolio-article-images">
+                <div class="modal-image">
+                    <img src="../images/vulgords-tower/process-0.jpg"
+                        alt="Early game prototype created to test gameplay">
+                    <p>Early game prototype created to test gameplay</p>
+                </div>
                 <div class="modal-image">
                     <img src="../images/vulgords-tower/screenshot-0.jpg" alt="Title screen with logo and buttons">
                     <p>Title screen with logo and buttons</p>
@@ -115,37 +139,9 @@
                     <img src="../images/vulgords-tower/screenshot-5.jpg" alt="Introduction backstory">
                     <p>Introduction backstory</p>
                 </div>
-                <div class="modal-image">
-                    <img src="../images/vulgords-tower/process-0.jpg"
-                        alt="Early game prototype created to test gameplay">
-                    <p>Early game prototype created to test gameplay</p>
-                </div>
             </div>
             <hr>
-            <div id="portfolio-article-samples">
-                <h3>Samples & Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://vulgordstower.com" target="_blank">Main website</a>: Visit the game website
-                    </li>
-                    <li>
-                        <a href="https://drive.google.com/uc?export=download&id=1IUR57i6U3qzmYmhUPxzgXaQWsflSIh-U"
-                            target="_blank">Early prototype alpha (desktop only)</a>: An early prototype build for
-                        Windows, created to test the gameplay before implementing online multiplayer
-                    </li>
-                    <li>
-                        <a href="../samples/vulgords-tower/vulgords-tower-balancing-sheet.xlsx"
-                            target="_blank">Balancing sheet</a>: The sheet used to help with balancing during
-                        development
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <p class="breadcrumb">
-                <a href="../game-portfolio">
-                    <img src="../images/breadcrumb-arrow.svg" alt="">Back to Game Portfolio
-                </a>
-            </p>
+            <p class="breadcrumb"></p>
         </div>
     </main>
     <footer class="dark-section">

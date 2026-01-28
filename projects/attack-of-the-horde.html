@@ -28,13 +28,13 @@
     <link rel="stylesheet" href="../styles/portfolio-article.css">
 </head>
 
-<body>
+<body data-default-breadcrumb="game-portfolio">
     <header class="dark-section" id="header">
         <div class="content">
             <h1 id="title"><a href="../">Gage Magar</a></h1>
             <menu id="nav">
                 <li class="nav-item underline-hover"><a href="../">About</a></li>
-                <li class="nav-item underline-hover current"><a href="../game-portfolio">Game Portfolio</a></li>
+                <li class="nav-item underline-hover"><a href="../game-portfolio">Game Portfolio</a></li>
                 <li class="nav-item underline-hover"><a href="../web-portfolio">Web Portfolio</a></li>
             </menu>
         </div>
@@ -73,10 +73,10 @@
                         <img src="../images/info-icon.svg" alt="">
                         <h3>Description</h3>
                     </div>
-                    <p>Attack of the Horde is a zombie-themed, arcade-style shooter inspired by Space Invaders and an
-                        80's B movie tone. It was created for a class project in which we were required to develop an
-                        interactive web experience with sound and visuals using JavaScript. It served as a learning
-                        experience for JavaScript programming and the PixiJS library.</p>
+                    <p>Attack of the Horde is a zombie-themed, arcade-style shooter inspired by Space Invaders. It was
+                        created for a class project in which we were required to develop an interactive web experience
+                        with visuals and sound using JavaScript. It served as a learning experience for structuring a
+                        complex JavaScript project and using the PixiJS library.</p>
                 </div>
                 <div class="portfolio-article-block info-block pause-until-view">
                     <div>
@@ -86,36 +86,7 @@
                     <p>The first step of development was to propose an idea for the design. A major personal goal was to
                         make this game concept simple enough to build quickly, but interesting enough to keep the player
                         engaged. After this, the development process occurred in parallel with learning the PixiJS
-                        library by exploring the documentation.</p>
-                </div>
-            </div>
-            <hr>
-            <div id="portfolio-article-images">
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/screenshot-0.jpg"
-                        alt="Title screen with logo and instructions">
-                    <p>Title screen with logo and instructions</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/screenshot-1.jpg" alt="First wave with a single zombie">
-                    <p>First wave with a single zombie</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/screenshot-2.jpg"
-                        alt="Ninth wave with complete barricades and shooter zombies">
-                    <p>Ninth wave with complete barricades and shooter zombies</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/screenshot-3.jpg" alt="Game over screen with statistics">
-                    <p>Game over screen with statistics</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/process-0.jpg" alt="Planning sketch for gameplay state">
-                    <p>Planning sketch for gameplay state</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/attack-of-the-horde/process-1.jpg" alt="Planning sketch for title screen">
-                    <p>Planning sketch for title screen</p>
+                        library by exploring documentation.</p>
                 </div>
             </div>
             <hr>
@@ -133,11 +104,38 @@
                 </ul>
             </div>
             <hr>
-            <p class="breadcrumb">
-                <a href="../game-portfolio">
-                    <img src="../images/breadcrumb-arrow.svg" alt="">Back to Game Portfolio
-                </a>
-            </p>
+            <div id="portfolio-article-images">
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/process-0.jpg" alt="Planning sketch for gameplay state">
+                    <p>Planning sketch for gameplay state</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/process-1.jpg" alt="Planning sketch for title screen">
+                    <p>Planning sketch for title screen</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/screenshot-0.jpg"
+                        alt="Title screen with logo and instructions">
+                    <p>Title screen with logo and instructions</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/screenshot-1.jpg"
+                        alt="Player gets taught how to shoot by starting the game using the same button">
+                    <p>Player gets taught how to shoot by starting the game using the same button</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/screenshot-2.jpg"
+                        alt="Difficulty gradually increases each wave">
+                    <p>Difficulty gradually increases each wave</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/attack-of-the-horde/screenshot-3.jpg"
+                    alt="Game over screen (high score gets saved in local storage)">
+                    <p>Game over screen (high score gets saved in local storage)</p>
+                </div>
+            </div>
+            <hr>
+            <p class="breadcrumb"></p>
         </div>
     </main>
     <footer class="dark-section">

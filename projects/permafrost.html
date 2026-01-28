@@ -28,13 +28,13 @@
     <link rel="stylesheet" href="../styles/portfolio-article.css">
 </head>
 
-<body>
+<body data-default-breadcrumb="game-portfolio">
     <header class="dark-section" id="header">
         <div class="content">
             <h1 id="title"><a href="../">Gage Magar</a></h1>
             <menu id="nav">
                 <li class="nav-item underline-hover"><a href="../">About</a></li>
-                <li class="nav-item underline-hover current"><a href="../game-portfolio">Game Portfolio</a></li>
+                <li class="nav-item underline-hover"><a href="../game-portfolio">Game Portfolio</a></li>
                 <li class="nav-item underline-hover"><a href="../web-portfolio">Web Portfolio</a></li>
             </menu>
         </div>
@@ -79,8 +79,8 @@
                     <p>Beneath the Permafrost is a first-person survival-horror game set in a frozen city. This project
                         was originally developed solo for several years. In summer 2025, I partnered with an environment
                         artist to register the project for the <strong>RIT MAGIC Maker program</strong>, serving as an
-                        academic co-op. The program was a major learning experience for managing team workflow and
-                        scope.</p>
+                        academic co-op. The project has been a learning experience in terms of managing scope and
+                        bringing on new people to a team.</p>
                 </div>
                 <div class="portfolio-article-block info-block pause-until-view">
                     <div>
@@ -88,14 +88,40 @@
                         <h3>Process & Challenges</h3>
                     </div>
                     <p>This has been under development for several years, going through many rewrites. During the Maker
-                        program, I had to massively reduce scope (a neglected problem from when it was a hobby project)
-                        to make both short-term and long-term timelines feasible. This project has also taught me a lot
-                        regarding game design, such as teaching players mechanics, guiding through level design, and UX.
+                        program, I had to massively reduce scope to make both short-term and long-term timelines
+                        feasible. This project has also taught me a lot regarding game design, such as onboarding
+                        players to gameplay mechanics, guiding through subtle cues level design, and creating immersive
+                        scenarios.
                     </p>
                 </div>
             </div>
             <hr>
+            <div id="portfolio-article-samples">
+                <h3>Samples & Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/uc?export=download&id=1ILrP-lWVcWdrE1V7_JiN9UvCInSkvyrc"
+                            target="_blank">Early alpha build (desktop only)</a>: A playable alpha demo build for
+                        Windows. This was from an early development stage, so expect bugs
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/btpermafrost" target="_blank">Social Media</a>: Will give
+                        more details about game itself
+                    </li>
+                </ul>
+            </div>
+            <hr>
             <div id="portfolio-article-images">
+                <div class="modal-image">
+                    <img src="../images/permafrost/process-0.jpg"
+                        alt="In-editor screenshot of a large, semi-open level environment">
+                    <p>In-editor screenshot of a large, semi-open level environment</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/permafrost/process-1.jpg"
+                        alt="In-editor screenshot of enemy prefab configuration with many components">
+                    <p>In-editor screenshot of enemy prefab configuration with many components</p>
+                </div>
                 <div class="modal-image">
                     <img src="../images/permafrost/screenshot-0.jpg" alt="Title screen with logo and buttons">
                     <p>Title screen with logo and buttons</p>
@@ -121,42 +147,9 @@
                     <img src="../images/permafrost/screenshot-5.jpg" alt="Enemy with AI, a 3D model, and animations">
                     <p>Enemy with AI, a 3D model, and animations</p>
                 </div>
-                <div class="modal-image">
-                    <img src="../images/permafrost/process-0.jpg"
-                        alt="In-editor screenshot of a large, semi-open level environment">
-                    <p>In-editor screenshot of a large, semi-open level environment</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/permafrost/process-1.jpg"
-                        alt="In-editor screenshot of enemy prefab configuration">
-                    <p>In-editor screenshot of enemy prefab configuration</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/permafrost/process-2.jpg" alt="Enemy concept art, made by me">
-                    <p>Enemy concept art, made by me</p>
-                </div>
             </div>
             <hr>
-            <div id="portfolio-article-samples">
-                <h3>Samples & Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://drive.google.com/uc?export=download&id=1ILrP-lWVcWdrE1V7_JiN9UvCInSkvyrc"
-                            target="_blank">Early alpha build (desktop only)</a>: A playable alpha demo build for
-                        Windows. This was from an early development stage, so expect bugs
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/btpermafrost" target="_blank">Social Media</a>: Will give
-                        more details about game itself
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <p class="breadcrumb">
-                <a href="../game-portfolio">
-                    <img src="../images/breadcrumb-arrow.svg" alt="">Back to Game Portfolio
-                </a>
-            </p>
+            <p class="breadcrumb"></p>
         </div>
     </main>
     <footer class="dark-section">

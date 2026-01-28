@@ -28,13 +28,13 @@
     <link rel="stylesheet" href="../styles/portfolio-article.css">
 </head>
 
-<body>
+<body data-default-breadcrumb="game-portfolio">
     <header class="dark-section" id="header">
         <div class="content">
             <h1 id="title"><a href="../">Gage Magar</a></h1>
             <menu id="nav">
                 <li class="nav-item underline-hover"><a href="../">About</a></li>
-                <li class="nav-item underline-hover current"><a href="../game-portfolio">Game Portfolio</a></li>
+                <li class="nav-item underline-hover"><a href="../game-portfolio">Game Portfolio</a></li>
                 <li class="nav-item underline-hover"><a href="../web-portfolio">Web Portfolio</a></li>
             </menu>
         </div>
@@ -72,10 +72,10 @@
                         <img src="../images/info-icon.svg" alt="">
                         <h3>Description</h3>
                     </div>
-                    <p>This is an unfinished experiment initially created to playtest the game design for a scrapped
-                        roguelike project where the player is a necromancer. The plan was for the player's health bar,
-                        which is composed of souls, to also double as a magic mana meter. The player could also revive
-                        slain enemies to create an army to make combat easier.</p>
+                    <p>This is an unfinished prototype created to test the idea for a roguelike where the player is a
+                        necromancer. The plan was for the player's health bar, which is composed of souls, to also
+                        double as a magic mana meter. The player could also revive slain enemies to create an army to
+                        make combat easier.</p>
                 </div>
                 <div class="portfolio-article-block info-block pause-until-view">
                     <div>
@@ -84,9 +84,20 @@
                     </div>
                     <p>The project began by developing an algorithm which would allow for interesting,
                         randomly-generated dungeon layouts featuring hand-crafted rooms. After this, the player and
-                        enemy systems were developed. An A* pathfinding algorithm and clumping avoidance behavior was
-                        implemented to form enemy AI.</p>
+                        enemy systems were developed. Clumping avoidance behavior was added to make enemy AI more
+                        interesting.</p>
                 </div>
+            </div>
+            <hr>
+            <div id="portfolio-article-samples">
+                <h3>Samples & Links</h3>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/uc?export=download&id=11KTb-qh1Z06_GOgYz70QUKCP0sZ_dr_k"
+                            target="_blank">Playable demo (desktop only)</a>: A build of the project for Windows. Has
+                        not been thoroughly tested for bugs
+                    </li>
+                </ul>
             </div>
             <hr>
             <div id="portfolio-article-images">
@@ -103,7 +114,7 @@
                 <div class="modal-image">
                     <img src="../images/project-roguelike/process-0.jpg"
                         alt="In-editor screenshot showing enemies navigating around tiles towards player">
-                    <p>In-editor screenshot showing enemies navigating around tiles towards player</p>
+                    <p>Enemy AI coordinating with pathfinding plugin to navigate to player</p>
                 </div>
                 <div class="modal-image">
                     <img src="../images/project-roguelike/process-1.jpg"
@@ -112,22 +123,7 @@
                 </div>
             </div>
             <hr>
-            <div id="portfolio-article-samples">
-                <h3>Samples & Links</h3>
-                <ul>
-                    <li>
-                        <a href="https://drive.google.com/uc?export=download&id=11KTb-qh1Z06_GOgYz70QUKCP0sZ_dr_k"
-                            target="_blank">Playable demo (desktop only)</a>: A build of the project for Windows. Has
-                        not been thoroughly tested for bugs
-                    </li>
-                </ul>
-            </div>
-            <hr>
-            <p class="breadcrumb">
-                <a href="../game-portfolio">
-                    <img src="../images/breadcrumb-arrow.svg" alt="">Back to Game Portfolio
-                </a>
-            </p>
+            <p class="breadcrumb"></p>
         </div>
     </main>
     <footer class="dark-section">

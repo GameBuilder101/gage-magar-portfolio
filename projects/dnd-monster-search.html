@@ -28,14 +28,14 @@
     <link rel="stylesheet" href="../styles/portfolio-article.css">
 </head>
 
-<body>
+<body data-default-breadcrumb="web-portfolio">
     <header class="dark-section" id="header">
         <div class="content">
             <h1 id="title"><a href="../">Gage Magar</a></h1>
             <menu id="nav">
                 <li class="nav-item underline-hover"><a href="../">About</a></li>
                 <li class="nav-item underline-hover"><a href="../game-portfolio">Game Portfolio</a></li>
-                <li class="nav-item underline-hover current"><a href="../web-portfolio">Web Portfolio</a></li>
+                <li class="nav-item underline-hover"><a href="../web-portfolio">Web Portfolio</a></li>
             </menu>
         </div>
     </header>
@@ -72,8 +72,8 @@
                         <h3>Description</h3>
                     </div>
                     <p>This is a small web page which allows the user to search through a database of monsters from the
-                        game Dungeons & Dragons. It was created for a course project where the goal was to create an
-                        application which interfaces with an existing online API using a search system.</p>
+                        game Dungeons & Dragons. It was created as an academic project where the goal was to create an
+                        application which interfaces with an online API using a search system.</p>
                 </div>
                 <div class="portfolio-article-block info-block pause-until-view">
                     <div>
@@ -85,18 +85,6 @@
                         search results. After this, time had to be spent analyzing API documentation. During
                         development, a challenging bug cropped up which turned out to be an issue with the API server.
                     </p>
-                </div>
-            </div>
-            <hr>
-            <div id="portfolio-article-images" class="two-one-fr">
-                <div class="modal-image">
-                    <img src="../images/dnd-monster-search/screenshot-0.jpg"
-                        alt="Listing of search results returned from the API">
-                    <p>Listing of search results returned from the API</p>
-                </div>
-                <div class="modal-image">
-                    <img src="../images/dnd-monster-search/process-0.jpg" alt="Planning sketch for page layout">
-                    <p>Planning sketch for page layout</p>
                 </div>
             </div>
             <hr>
@@ -113,11 +101,19 @@
                 </ul>
             </div>
             <hr>
-            <p class="breadcrumb">
-                <a href="../web-portfolio">
-                    <img src="../images/breadcrumb-arrow.svg" alt="">Back to Web Portfolio
-                </a>
-            </p>
+            <div id="portfolio-article-images" class="two-one-fr">
+                <div class="modal-image">
+                    <img src="../images/dnd-monster-search/screenshot-0.jpg"
+                        alt="Listing of search results returned from the API">
+                    <p>Listing of search results returned from the API</p>
+                </div>
+                <div class="modal-image">
+                    <img src="../images/dnd-monster-search/process-0.jpg" alt="Planning sketch for page layout">
+                    <p>Planning sketch for page layout</p>
+                </div>
+            </div>
+            <hr>
+            <p class="breadcrumb"></p>
         </div>
     </main>
     <footer class="dark-section">
